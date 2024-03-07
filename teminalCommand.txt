@@ -1,0 +1,10 @@
+npm-> pnpm   & npx -> pnpx
+
+pnpm create vite ./
+
+  pnpm install
+  pnpm run dev
+
+
+
+  

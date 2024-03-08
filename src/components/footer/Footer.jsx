@@ -2,10 +2,40 @@ import { RiFacebookCircleFill } from "react-icons/ri";
 import { FaGooglePlus } from "react-icons/fa";
 
 function Footer() {
+  const links = [
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Our WareHouses",
+      href: "/warehouses",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+    },
+    {
+      title: "News and Media",
+      href: "/news",
+    },
+  ];
+
+  const legalLinks = [
+    {
+      title: "Teams",
+      href: "/teams",
+    },
+    {
+      title: "Privacy",
+      href: "/privacy",
+    },
+  ];
+
   return (
     <footer className="py-4 mt-8 bg-blue-800 container-fluid text-light">
       <div className="row">
-        <div className="col-lg-3 col-md-6">
+        <div className="col-12 col-md-6 col-lg-3">
           <h5 className="mb-2 display-5">
             Ship<span className="text-danger">Up</span>
           </h5>
@@ -15,21 +45,25 @@ function Footer() {
           </p>
         </div>
 
-        <div className="col-lg-3 col-md-6">
+        <div className="col-12 col-md-6 col-lg-3">
           <h5 className="mb-2 display-5">Explore</h5>
-          <p>About</p>
-          <p>Our WareHouses</p>
-          <p>Blog</p>
-          <p>News and Media</p>
+          {links.map((link) => (
+            <p key={link.href}>
+              <a href={link.href}>{link.title}</a>
+            </p>
+          ))}
         </div>
 
-        <div className="col-lg-3 col-md-6">
+        <div className="col-12 col-md-6 col-lg-3">
           <h5 className="mb-2 display-5">Legal</h5>
-          <p>Teams</p>
-          <p>Privacy</p>
+          {legalLinks.map((link) => (
+            <p key={link.href}>
+              <a href={link.href}>{link.title}</a>
+            </p>
+          ))}
         </div>
 
-        <div className="col-lg-3 col-md-6">
+        <div className="col-12 col-md-6 col-lg-3">
           <h5 className="mb-2 display-5">Social Media</h5>
           <div className="flex-row gap-4 d-flex social-media-links">
             <div className="w-4 h-4 social-media-link">

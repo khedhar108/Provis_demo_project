@@ -1,6 +1,6 @@
 import { menuItems } from "../../../constants/menuData";
 import { Nav, NavDropdown } from "react-bootstrap"; // Import Nav and NavDropdown from react-bootstrap
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -22,7 +22,7 @@ function Navbar() {
               id={`nav-dropdown-${item.id}`}
               className="custom-dropdown" // Updated class for custom dropdown styling
             >
-              <div className="flex justify-between">
+              <div className="flex flex-col justify-between md:flex-row">
                 <div>
                   <h3 className="m-2 text-lg">Company</h3>
                   {item.subMenu.map((subItem) => (
@@ -45,15 +45,15 @@ function Navbar() {
                     </NavDropdown.Item>
                   ))}
                 </div>
-                <div className="flex flex-col items-center m-2 ml-5">
+                <div className="flex flex-col items-center m-2 ml-5 md:m-2">
                   <h2>NewsRoom</h2>
                   <img
                     src="https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="News"
                     sizes="50px"
-                    className="mt-2 rounded-md border-2 border-gray-600"
+                    className="mt-2 border-2 border-gray-600 rounded-md"
                   />
-                  <p className="mt-2 w-full text-sm text-gray-600 hover:text-gray-900">
+                  <p className="w-full mt-2 text-sm text-gray-600 hover:text-gray-900">
                     News
                   </p>
                   <a

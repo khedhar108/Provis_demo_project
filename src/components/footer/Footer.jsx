@@ -1,8 +1,6 @@
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { FaGooglePlus } from "react-icons/fa";
 
-import { RiFacebookCircleFill } from "react-icons/ri";
-import { FaGooglePlus } from "react-icons/fa";
 
 function Footer() {
   const links = [

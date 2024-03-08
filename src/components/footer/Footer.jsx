@@ -1,6 +1,9 @@
 import { RiFacebookCircleFill } from "react-icons/ri";
 import { FaGooglePlus } from "react-icons/fa";
 
+import { RiFacebookCircleFill } from "react-icons/ri";
+import { FaGooglePlus } from "react-icons/fa";
+
 function Footer() {
   const links = [
     {
@@ -36,7 +39,7 @@ function Footer() {
     <footer className="py-4 mt-8 bg-blue-800 container-fluid text-light">
       <div className="row">
         <div className="col-12 col-md-6 col-lg-3">
-          <h5 className="mb-2 display-5">
+          <h5 className="mb-2 text-center display-5 text-md-start">
             Ship<span className="text-danger">Up</span>
           </h5>
           <p>
@@ -46,7 +49,7 @@ function Footer() {
         </div>
 
         <div className="col-12 col-md-6 col-lg-3">
-          <h5 className="mb-2 display-5">Explore</h5>
+          <h5 className="mb-2 text-center display-5 text-md-start">Explore</h5>
           {links.map((link) => (
             <p key={link.href}>
               <a href={link.href}>{link.title}</a>
@@ -55,7 +58,7 @@ function Footer() {
         </div>
 
         <div className="col-12 col-md-6 col-lg-3">
-          <h5 className="mb-2 display-5">Legal</h5>
+          <h5 className="mb-2 text-center display-5 text-md-start">Legal</h5>
           {legalLinks.map((link) => (
             <p key={link.href}>
               <a href={link.href}>{link.title}</a>
@@ -64,7 +67,9 @@ function Footer() {
         </div>
 
         <div className="col-12 col-md-6 col-lg-3">
-          <h5 className="mb-2 display-5">Social Media</h5>
+          <h5 className="mb-2 text-center display-5 text-md-start">
+            Social Media
+          </h5>
           <div className="flex-row gap-4 d-flex social-media-links">
             <div className="w-4 h-4 social-media-link">
               <a href="#">

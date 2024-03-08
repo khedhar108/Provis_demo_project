@@ -50,7 +50,7 @@ function Footer() {
         </div>
       </div>
 
-      <hr />
+      <hr className="my-4" />
 
       <div className="my-1 text-center">
         Ship <span className="text-danger">Up</span>

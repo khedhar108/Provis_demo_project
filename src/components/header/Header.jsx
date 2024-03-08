@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Navbar from "./navbar/Navbar";
 import {
   Container,
@@ -15,25 +15,25 @@ function Header() {
   };
 
   return (
-    <BootstrapNavbar bg="light" expand="lg" expanded={expanded} className="z-10">
-      <Container className="d-flex justify-content-center align-items-center">
-        <BootstrapNavbar.Brand href="#home">
+    <BootstrapNavbar bg="light" expand="lg" expanded={expanded}>
+      <Container fluid>
+        <BootstrapNavbar.Brand href="#">
           Ship<span style={{ color: "red" }}>Up</span>
         </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle onClick={toggleNavbar} aria-controls="basic-navbar-nav" />
-        <BootstrapNavbar.Collapse
-          id="basic-navbar-nav"
-          className="d-flex justify-content-center"
-        >
-          <Nav className="me-auto">
+        <BootstrapNavbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={toggleNavbar}
+        />
+        <BootstrapNavbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
             <Navbar />
           </Nav>
-          <Button variant="primary" className="mr-2" style={{ color: "black" }}>
-            Request Quote
-          </Button>
-          <Button variant="success" style={{ color: "black" }}>
-            Join Now
-          </Button>
+          <Nav className="gap-2 ms-auto d-flex">
+            <Button variant="outline-primary" className="me-2">
+              Request Quote
+            </Button>
+            <Button variant="outline-success">Join Now</Button>
+          </Nav>
         </BootstrapNavbar.Collapse>
       </Container>
     </BootstrapNavbar>

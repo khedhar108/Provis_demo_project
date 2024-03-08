@@ -1,13 +1,11 @@
-
 import { parameters } from "../../constants/parameters";
-
 
 function CostCalculator() {
   return (
-    <div className="flex flex-col justify-evenly mt-4 md:flex-row">
+    <div className="flex flex-col m-4 mt-4 justify-evenly md:flex-row">
       {parameters.map((param) => (
-        <fieldset className="p-3 rounded-md border" key={param.id}>
-          <legend className="mb-3">{param.Legend}</legend>
+        <fieldset className="p-3 text-center border rounded-md" key={param.id}>
+          <legend className="p-1 mb-3 border-b">{param.Legend}</legend>
           <div className="mb-3 rounded-full">
             {/* <label htmlFor={`input${param.id}`} className="form-label">
               {param.Label}
@@ -27,7 +25,7 @@ function CostCalculator() {
         </fieldset>
       ))}
 
-      <div className="flex justify-center items-center mt-4 md:justify-start md:mt-0">
+      <div className="flex items-center justify-center mt-4 md:justify-start md:mt-0">
         {" "}
         <button className="btn btn-primary">Check Price</button>
       </div>

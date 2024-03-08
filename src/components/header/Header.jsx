@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from "./navbar/Navbar";
 import {
   Container,
@@ -7,13 +8,19 @@ import {
 } from "react-bootstrap";
 
 function Header() {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleNavbar = () => {
+    setExpanded(!expanded);
+  };
+
   return (
-    <BootstrapNavbar bg="light" expand="lg" fixed="top" className="z-10">
+    <BootstrapNavbar bg="light" expand="lg" expanded={expanded} className="z-10">
       <Container className="d-flex justify-content-center align-items-center">
         <BootstrapNavbar.Brand href="#home">
           Ship<span style={{ color: "red" }}>Up</span>
         </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Toggle onClick={toggleNavbar} aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse
           id="basic-navbar-nav"
           className="d-flex justify-content-center"

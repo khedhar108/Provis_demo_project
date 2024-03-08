@@ -1,6 +1,6 @@
 import { useState } from "react";
 import YouTube from "react-youtube";
-import Modal from "react-modal";
+import Modal from "react-bootstrap/Modal";
 
 const VideoPopup = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,16 +13,35 @@ const VideoPopup = () => {
     setIsModalOpen(false);
   };
 
+  const opts = {
+    height: "100%",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
     <div className="z-50">
-      <button onClick={openModal}>Play Demo</button>
+      <button onClick={openModal} className="btn btn-secondary">
+        Play Demo
+      </button>
       <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Video Player Modal"
+        show={isModalOpen}
+        onHide={closeModal}
+        contentClassName="video-modal"
       >
-        <button onClick={closeModal}>Close</button>
-        <YouTube videoId="https://www.youtube.com/watch?v=sGZ6AlAnULc" />
+        <Modal.Header closeButton>
+          <Modal.Title>Video Player Modal</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <YouTube videoId="sGZ6AlAnULc" opts={opts} />
+        </Modal.Body>
+        <Modal.Footer>
+          <button onClick={closeModal} className="btn btn-danger">
+            Close
+          </button>
+        </Modal.Footer>
       </Modal>
     </div>
   );

@@ -1,6 +1,3 @@
-# React + Vite + Tailwind CSS + pnpm in termial
+# React + Vite + Tailwind CSS + Bootstrap + pnpm in termial
 
-### Clone this starter kit
-
-git clone https://github.com/khedhar108/ViteStarter.git
-
+Rsponsive + Optimized + Seperation of concerns+ youtube Popup

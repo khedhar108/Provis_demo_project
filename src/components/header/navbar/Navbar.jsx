@@ -20,7 +20,7 @@ function Navbar() {
             <NavDropdown
               title={item.title}
               id={`nav-dropdown-${item.id}`}
-              className="z-50 custom-dropdown" // Updated class for custom dropdown styling
+              className="custom-dropdown" // Updated class for custom dropdown styling
             >
               <div className="flex flex-col justify-between md:flex-row">
                 <div>
@@ -45,12 +45,12 @@ function Navbar() {
                     </NavDropdown.Item>
                   ))}
                 </div>
-                <div className="flex flex-col items-center m-2 ml-5 md:m-2">
+                <div className="flex flex-col items-center m-2 ml-5 md:m-2 news-room">
                   <h2>NewsRoom</h2>
                   <img
                     src="https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="News"
-                    sizes="50px"
+                    sizes="100px"
                     className="mt-2 border-2 border-gray-600 rounded-md"
                   />
                   <p className="w-full mt-2 text-sm text-gray-600 hover:text-gray-900">

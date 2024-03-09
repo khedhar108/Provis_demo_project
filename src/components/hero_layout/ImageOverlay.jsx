@@ -3,7 +3,7 @@ import { VideoPopup } from "./VideoPopup";
 
 function ImageOverlayHorizontal() {
   return (
-    <div className="mx-8 mt-20 shadow-sm h-4/7 animate__animated animate__fadeIn">
+    <div className="z-10 mx-8 mt-20 shadow-sm h-4/7 animate__animated animate__fadeIn">
       <div className="container my-xxl">
         <div className="row">
           <div className="col-md-12">
@@ -54,5 +54,6 @@ function ImageOverlayHorizontal() {
     </div>
   );
 }
+
 
 export default ImageOverlayHorizontal;

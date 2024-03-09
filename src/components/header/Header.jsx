@@ -38,7 +38,7 @@ function Header() {
           className="animate__animated animate__fadeIn"
         >
           <Nav className="ms-auto animate__animated animate__fadeInRight">
-            <Navbar />
+            <Navbar className="z-20" />
           </Nav>
           <Nav className="gap-2 ms-auto d-flex animate__animated animate__fadeInUp">
             <Button variant="outline-primary" className="me-2">

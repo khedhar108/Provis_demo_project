@@ -4,7 +4,10 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <Nav className="m-auto">
+    <Nav
+      className="m-auto animate__animated animate__fadeIn"
+      style={{ zIndex: 1000 }}
+    >
       {menuItems?.map((item) => (
         <Nav.Item key={item.id}>
           {!item.subMenu ? (
@@ -20,7 +23,7 @@ function Navbar() {
             <NavDropdown
               title={item.title}
               id={`nav-dropdown-${item.id}`}
-              className="custom-dropdown" // Updated class for custom dropdown styling
+              className="custom-dropdown animate__animated animate__fadeIn" // Updated class for custom dropdown styling with animation
             >
               <div className="flex flex-col justify-between md:flex-row">
                 <div>
@@ -30,7 +33,7 @@ function Navbar() {
                       key={subItem.id}
                       as={NavLink} // Change NavDropdown.Item to NavLink
                       to={subItem.path}
-                      className="flex items-center"
+                      className="flex items-center animate__animated animate__fadeIn" // Added animation
                       activeClassName="active" // Add activeClassName for active link styling
                     >
                       <div>
@@ -45,7 +48,7 @@ function Navbar() {
                     </NavDropdown.Item>
                   ))}
                 </div>
-                <div className="flex flex-col items-center m-2 ml-5 md:m-2 news-room">
+                <div className="flex flex-col items-center m-2 ml-5 md:m-2 news-room animate__animated animate__fadeIn">
                   <h2>NewsRoom</h2>
                   <img
                     src="https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=600"
